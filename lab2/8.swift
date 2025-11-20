@@ -1,6 +1,12 @@
 func isPalindrome(_ text: String) -> Bool {
-    let cleaned = text.lowercased().filter { $0.isLetter }
-    return cleaned == String(cleaned.reversed())
+    var slovo = ""
+        for c in text.lowercased() {
+        if c.isLetter {
+            slovo.append(c)
+        }
+    }
+    return slovo == String(slovo.reversed())
 }
-print(isPalindrome("naffan"))
-print(isPalindrome("banana"))
+print(isPalindrome("naffan"))   
+print(isPalindrome("banana"))   
+

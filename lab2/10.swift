@@ -8,5 +8,7 @@ func uniq(_ text: String) -> Bool {
     }
     return true
 }
-print(uniq("Hello")) 
-print(uniq("World")) 
+print(uniq("nazyken")) 
+print(uniq("nazy")) 
+
+
