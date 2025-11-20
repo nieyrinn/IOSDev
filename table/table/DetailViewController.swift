@@ -1,7 +1,7 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
-
+//
     var item: Item!
 
     @IBOutlet weak var coverImage: UIImageView!
