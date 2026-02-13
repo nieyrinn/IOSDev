@@ -1,10 +1,3 @@
-//
-//  FavoriteModels.swift
-//  tableview
-//
-//  Created by nieyrinn on 14.11.2025.
-//
-
 import Foundation
 
 enum Section: Int, CaseIterable {

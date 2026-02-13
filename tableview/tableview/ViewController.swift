@@ -20,7 +20,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        Section.allCases.count 
+        return 4
     }
 
     func tableView(_ tableView: UITableView,
