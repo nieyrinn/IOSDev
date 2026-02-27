@@ -56,12 +56,9 @@ struct ContentView: View {
     
     @State var currentIndex: Int = 0
     @State var tapCount: Int = 0
-    
     var body: some View {
         VStack(spacing: 20) {
-            
             Spacer()
-            
             Image(systemName: itemIcons[currentIndex])
                 .font(.system(size: 80))
                 .foregroundStyle(.purple)
