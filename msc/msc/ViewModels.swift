@@ -1,11 +1,3 @@
-//
-//  AlbumsViewModel.swift
-//  msc
-//
-//  Created by nieyrinn on 07.03.2026.
-//
-
-
 import Foundation
 
 @MainActor

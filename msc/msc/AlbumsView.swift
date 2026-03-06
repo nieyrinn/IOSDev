@@ -1,11 +1,3 @@
-//
-//  AlbumsView.swift
-//  msc
-//
-//  Created by nieyrinn on 07.03.2026.
-//
-
-
 import SwiftUI
 
 struct AlbumsView: View {
@@ -21,10 +13,15 @@ struct AlbumsView: View {
                 ContentUnavailableView(error, systemImage: "wifi.slash")
             } else {
                 List(viewModel.albums) { album in
-                    AlbumRow(album: album)
-                        .contentShape(Rectangle())
-                        .onTapGesture { onAlbumTap(album) }
-                        .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    Button {
+                        onAlbumTap(album)
+                    } label: {
+                        AlbumRow(album: album)
+                    }
+                    .buttonStyle(.plain)
+                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                    .listRowBackground(Color.blue.opacity(0.1))
+
                 }
                 .listStyle(.plain)
             }

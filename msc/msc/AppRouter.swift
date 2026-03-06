@@ -10,19 +10,21 @@ class AppRouter {
 
     func start() {
         let viewModel = AlbumsViewModel()
-        let view = AlbumsView(viewModel: viewModel) { [weak self] album in
+        let view = AlbumsView(viewModel: viewModel, onAlbumTap: { [weak self] album in
+            print("Album tapped: \(album.collectionName)")
             self?.showTracks(for: album)
-        }
+        })
         let hostingController = UIHostingController(rootView: view)
         hostingController.title = "Albums"
         navigationController.setViewControllers([hostingController], animated: false)
     }
 
     func showTracks(for album: Album) {
+        print("showTracks called for: \(album.collectionName)")
         let viewModel = TracksViewModel(album: album)
-        let view = TracksView(viewModel: viewModel) { [weak self] track in
+        let view = TracksView(viewModel: viewModel, onTrackTap: { [weak self] track in
             self?.showPlayer(for: track)
-        }
+        })
         let hostingController = UIHostingController(rootView: view)
         navigationController.pushViewController(hostingController, animated: true)
     }
